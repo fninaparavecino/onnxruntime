@@ -38,6 +38,7 @@ for v2t in ${version2tag[*]}; do
   GetFile https://github.com/onnx/onnx/archive/$onnx_version.tar.gz /tmp/src/$onnx_version.tar.gz
   tar -xf /tmp/src/$onnx_version.tar.gz -C /tmp/src
   cd /tmp/src/onnx-$onnx_version
+  sed -i 's/^\s*option(ONNX_GEN_PB_TYPE_STUBS.*$//' CMakeLists.txt
   git clone https://github.com/pybind/pybind11.git third_party/pybind11
   ${PYTHON_EXE} -m pip install .
   mkdir -p /data/onnx/${onnx_tag}
