@@ -17,7 +17,7 @@ elif [[ "$PYTHON_VER" = "3.6" && -d "/opt/python/cp36-cp36m"  ]]; then
 elif [[ "$PYTHON_VER" = "3.7" && -d "/opt/python/cp36-cp36m"  ]]; then
    PYTHON_EXE="/opt/python/cp37-cp37m/bin/python3.7"
 else
-   PYTHON_EXE="/usr/bin/${PYTHON_EXE}"
+   PYTHON_EXE="/usr/bin/${PYTHON_VER}"
 fi
 
 version2tag=(5af210ca8a1c73aa6bae8754c9346ec54d0a756e-onnx123
